@@ -1,5 +1,5 @@
-import { Badge, Box, Button, Card, Heading, HStack, Image } from "@chakra-ui/react";
-import { BsClock } from "react-icons/bs";
+import { Badge, Box, Button, Card, Heading, HStack, Image, Switch } from "@chakra-ui/react";
+import { BsBell, BsClock } from "react-icons/bs";
 
 export function ShowsList() {
     return (
@@ -16,20 +16,30 @@ export function ShowsList() {
                     alt="Caffe Latte"
                 />
                 <Box>
-                <Card.Body>
-                    <Card.Title mb="2">Penguins</Card.Title>
-                    <Card.Description>
-                        Caffè latte is a coffee beverage of Italian origin made with espresso
-                        and steamed milk.
-                    </Card.Description>
-                    <HStack mt="4">
-                        <Badge>Animation</Badge>
-                        <Badge><BsClock /> 10 min.</Badge>
-                    </HStack>
-                </Card.Body>
-                <Card.Footer>
-                    <Button>Buy Latte</Button>
-                </Card.Footer>
+                    <Card.Body>
+                        <Card.Title mb="2">Penguins</Card.Title>
+                        <Card.Description>
+                            Caffè latte is a coffee beverage of Italian origin made with espresso
+                            and steamed milk.
+                        </Card.Description>
+                        <HStack mt="4">
+                            <Badge>Animation</Badge>
+                            <Badge><BsClock /> 10 min.</Badge>
+                        </HStack>
+                    </Card.Body>
+                    <Card.Footer>
+                        <Switch.Root size="lg">
+                            <Switch.HiddenInput />
+                            <Switch.Control>
+                                <Switch.Thumb>
+                                <Switch.ThumbIndicator fallback={<BsBell color="black" />}>
+                                    <BsBell />
+                                </Switch.ThumbIndicator>
+                                </Switch.Thumb>
+                            </Switch.Control>
+                            <Switch.Label>Notify me</Switch.Label>
+                        </Switch.Root>
+                    </Card.Footer>
                 </Box>
             </Card.Root>
             <Card.Root flexDirection="row" overflow="hidden" size="sm">
@@ -43,20 +53,30 @@ export function ShowsList() {
                     alt="Caffe Latte"
                 />
                 <Box>
-                <Card.Body>
-                    <Card.Title mb="2">Cheetahs</Card.Title>
-                    <Card.Description>
-                    Caffè latte is a coffee beverage of Italian origin made with espresso
-                    and steamed milk.
-                    </Card.Description>
-                    <HStack mt="4">
-                    <Badge>Animation</Badge>
-                    <Badge><BsClock /> 10 min.</Badge>
-                    </HStack>
-                </Card.Body>
-                <Card.Footer>
-                    <Button>Buy Latte</Button>
-                </Card.Footer>
+                    <Card.Body>
+                        <Card.Title mb="2">Cheetahs</Card.Title>
+                        <Card.Description>
+                        Caffè latte is a coffee beverage of Italian origin made with espresso
+                        and steamed milk.
+                        </Card.Description>
+                        <HStack mt="4">
+                        <Badge>Animation</Badge>
+                        <Badge><BsClock /> 10 min.</Badge>
+                        </HStack>
+                    </Card.Body>
+                    <Card.Footer>
+                        <Switch.Root size="lg">
+                            <Switch.HiddenInput />
+                            <Switch.Control>
+                                <Switch.Thumb>
+                                <Switch.ThumbIndicator fallback={<BsBell color="black" />}>
+                                    <BsBell />
+                                </Switch.ThumbIndicator>
+                                </Switch.Thumb>
+                            </Switch.Control>
+                            <Switch.Label>Notify me</Switch.Label>
+                        </Switch.Root>
+                    </Card.Footer>
                 </Box>
             </Card.Root>
             <Card.Root flexDirection="row" overflow="hidden" size="sm">
@@ -70,20 +90,30 @@ export function ShowsList() {
                     alt="Caffe Latte"
                 />
                 <Box>
-                <Card.Body>
-                    <Card.Title mb="2">Giant pandas</Card.Title>
-                    <Card.Description>
-                    Caffè latte is a coffee beverage of Italian origin made with espresso
-                    and steamed milk.
-                    </Card.Description>
-                    <HStack mt="4">
-                    <Badge>Animation</Badge>
-                    <Badge><BsClock /> 10 min.</Badge>
-                    </HStack>
-                </Card.Body>
-                <Card.Footer>
-                    <Button>Buy Latte</Button>
-                </Card.Footer>
+                    <Card.Body>
+                        <Card.Title mb="2">Giant pandas</Card.Title>
+                        <Card.Description>
+                        Caffè latte is a coffee beverage of Italian origin made with espresso
+                        and steamed milk.
+                        </Card.Description>
+                        <HStack mt="4">
+                        <Badge>Animation</Badge>
+                        <Badge><BsClock /> 10 min.</Badge>
+                        </HStack>
+                    </Card.Body>
+                    <Card.Footer>
+                        <Switch.Root size="lg">
+                            <Switch.HiddenInput />
+                            <Switch.Control>
+                                <Switch.Thumb>
+                                <Switch.ThumbIndicator fallback={<BsBell color="black" />}>
+                                    <BsBell />
+                                </Switch.ThumbIndicator>
+                                </Switch.Thumb>
+                            </Switch.Control>
+                            <Switch.Label>Notify me</Switch.Label>
+                        </Switch.Root>
+                    </Card.Footer>
                 </Box>
             </Card.Root>
         </>
