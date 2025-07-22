@@ -3,13 +3,15 @@ import { BsClock } from "react-icons/bs";
 
 export function ShowsList() {
     return (
-        <Box className="container">
-            <Heading as="h1">List of shows and animations</Heading>
+        <>
+            <Heading as="h1" mb={4}>List of shows and animations</Heading>
             <Card.Root flexDirection="row" overflow="hidden" size="sm">
                 <Image
                     objectFit="cover"
-                    width="200px"
-                    height="200px"
+                    width="100px"
+                    height="100px"
+                    mt={5}
+                    ml={5}
                     src="https://images.unsplash.com/photo-1462888210965-cdf193fb74de?q=60&w=500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Caffe Latte"
                 />
@@ -33,8 +35,10 @@ export function ShowsList() {
             <Card.Root flexDirection="row" overflow="hidden" size="sm">
                 <Image
                     objectFit="cover"
-                    width="200px"
-                    height="200px"
+                    width="100px"
+                    height="100px"
+                    mt={5}
+                    ml={5}
                     src="https://images.unsplash.com/photo-1700145326965-9d8e1c54dddc?q=60&w=500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Caffe Latte"
                 />
@@ -58,8 +62,10 @@ export function ShowsList() {
             <Card.Root flexDirection="row" overflow="hidden" size="sm">
                 <Image
                     objectFit="cover"
-                    width="200px"
-                    height="200px"
+                    width="100px"
+                    height="100px"
+                    mt={5}
+                    ml={5}
                     src="https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=60&w=500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Caffe Latte"
                 />
@@ -80,6 +86,6 @@ export function ShowsList() {
                 </Card.Footer>
                 </Box>
             </Card.Root>
-        </Box>
+        </>
     )
 }

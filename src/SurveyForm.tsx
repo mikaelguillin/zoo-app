@@ -3,7 +3,7 @@ import { Box, Button, Field, Heading, Input, RatingGroup, Textarea } from "@chak
 export function SurveyForm() {
     return (
         <Box className="container">
-            <Heading as="h1">Give us a feedback!</Heading>
+            <Heading as="h1" mb={4}>Give us a feedback!</Heading>
             <form>
                 <Field.Root>
                     <Field.Label>

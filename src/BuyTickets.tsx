@@ -5,7 +5,7 @@ import { SiVenmo } from "react-icons/si";
 export function BuyTickets() {
     return (
         <Box className="container">
-            <Heading as="h1">Buy a ticket</Heading>
+            <Heading as="h1" mb={4}>Buy a ticket</Heading>
 
             <form>
                 <Field.Root>
