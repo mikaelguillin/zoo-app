@@ -1,4 +1,4 @@
-import { Badge, Box, Button, Card, Heading, HStack, Image, Switch } from "@chakra-ui/react";
+import { Badge, Box, Card, Heading, HStack, Image, Switch } from "@chakra-ui/react";
 import { BsBell, BsClock } from "react-icons/bs";
 
 export function ShowsList() {
@@ -19,8 +19,8 @@ export function ShowsList() {
                     <Card.Body>
                         <Card.Title mb="2">Penguins</Card.Title>
                         <Card.Description>
-                            Caffè latte is a coffee beverage of Italian origin made with espresso
-                            and steamed milk.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </Card.Description>
                         <HStack mt="4">
                             <Badge>Animation</Badge>
@@ -56,8 +56,8 @@ export function ShowsList() {
                     <Card.Body>
                         <Card.Title mb="2">Cheetahs</Card.Title>
                         <Card.Description>
-                        Caffè latte is a coffee beverage of Italian origin made with espresso
-                        and steamed milk.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </Card.Description>
                         <HStack mt="4">
                         <Badge>Animation</Badge>
@@ -93,8 +93,8 @@ export function ShowsList() {
                     <Card.Body>
                         <Card.Title mb="2">Giant pandas</Card.Title>
                         <Card.Description>
-                        Caffè latte is a coffee beverage of Italian origin made with espresso
-                        and steamed milk.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </Card.Description>
                         <HStack mt="4">
                         <Badge>Animation</Badge>
