@@ -1,4 +1,4 @@
-import { Badge, Box, Button, Card, Heading, HStack, IconButton, Image, Switch, Text, useDisclosure, VStack } from "@chakra-ui/react";
+import { Badge, Box, Button, Card, Heading, HStack, IconButton, Image, Switch, useDisclosure, VStack } from "@chakra-ui/react";
 import { BsBell, BsCarFront, BsClock, BsFacebook, BsInfo, BsInstagram, BsTicket, BsTiktok, BsTwitterX, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router";
 import { OpeningHoursDialog } from "./OpeningHoursDialog";
