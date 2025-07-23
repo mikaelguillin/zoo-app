@@ -1,48 +1,63 @@
 import type { ReactNode } from "react";
-import { Link } from "react-router";
-import { Box, HStack } from "@chakra-ui/react";
+import { NavLink, type NavLinkRenderProps } from "react-router";
+import { Box, HStack, Text } from "@chakra-ui/react";
 import { BsHouse, BsMap, BsPerson } from "react-icons/bs";
 import { BiSolidMicrophoneAlt } from "react-icons/bi";
 
 export function Layout({children}: {children: ReactNode}) {
+    const getClassName = ({ isActive, isPending }: NavLinkRenderProps) =>
+        isActive
+            ? "active"
+            : isPending
+            ? "pending"
+            : "";
+
     return (
         <>
             <main>
                 {children}
             </main>
-            <Box as="nav" position="fixed" bottom={0} left={0} right={0} p={5} background="white" zIndex={9999} borderTop="1px solid black">
-                <HStack as="ul" gap={5} justifyContent="center" textAlign="center">
+            <Box as="nav" className="main-navigation" position="fixed" bottom={0} left={0} right={0} pl={5} pr={5} background="white" zIndex={9999} borderTop="1px solid black" fontSize={15}>
+                <HStack as="ul" justifyContent="center" textAlign="center">
                     <li>
-                        <Link to="/">
+                        <NavLink to="/" className={getClassName}>
                             <Box asChild margin="0 auto">
-                                <BsHouse />
+                                <BsHouse size={22} />
                             </Box>
-                            Home
-                        </Link>
+                            <Text fontSize="10px">
+                                Home
+                            </Text>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/map">
+                        <NavLink to="/map" className={getClassName}>
                             <Box asChild margin="0 auto">
-                                <BsMap />
+                                <BsMap size={22} />
                             </Box>
-                            Map
-                        </Link>
+                            <Text fontSize="10px">
+                                Map
+                            </Text>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/shows">
+                        <NavLink to="/shows" className={getClassName}>
                             <Box asChild margin="0 auto">
-                                <BiSolidMicrophoneAlt />
+                                <BiSolidMicrophoneAlt size={22} />
                             </Box>
-                            Shows
-                        </Link>
+                            <Text fontSize="10px">
+                                Shows
+                            </Text>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/myaccount">
+                        <NavLink to="/myaccount" className={getClassName}>
                             <Box asChild margin="0 auto">
-                                <BsPerson />
+                                <BsPerson size={22} />
                             </Box>
-                            My Account
-                        </Link>
+                            <Text fontSize="10px">
+                                My Account
+                            </Text>
+                        </NavLink>
                     </li>
                 </HStack>
             </Box>

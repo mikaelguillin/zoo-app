@@ -46,7 +46,7 @@ export function SurveyForm() {
                         <Field.RequiredIndicator />
                         Rate your experience:
                     </Field.Label>
-                    <RatingGroup.Root count={5} defaultValue={3} size="sm">
+                    <RatingGroup.Root count={5} defaultValue={3} size="lg">
                         <RatingGroup.HiddenInput />
                         <RatingGroup.Control />
                     </RatingGroup.Root>

@@ -1,4 +1,4 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { ImageOverlay, MapContainer, Marker, Popup } from "react-leaflet";
 import L from 'leaflet';
 import { IconButton, useDisclosure } from "@chakra-ui/react";
 import { FaLocationCrosshairs } from "react-icons/fa6";
@@ -17,21 +17,21 @@ export function Map() {
 
     const penguinsIcon = new L.Icon({
         iconUrl: icons.penguins,
-        iconSize: [40, 40], // size of the icon
+        iconSize: [50, 50], // size of the icon
         iconAnchor: [20, 32], // point of the icon which will correspond to marker's location
         popupAnchor: [0, -32], // point from which the popup should open relative to the iconAnchor,
         className: 'custom-marker',
     });
     const giraffesIcon = new L.Icon({
         iconUrl: icons.giraffes,
-        iconSize: [40, 40], // size of the icon
+        iconSize: [50, 50], // size of the icon
         iconAnchor: [20, 32], // point of the icon which will correspond to marker's location
         popupAnchor: [0, -32], // point from which the popup should open relative to the iconAnchor,
         className: 'custom-marker',
     });
     const lionsIcon = new L.Icon({
         iconUrl: icons.lions,
-        iconSize: [40, 40], // size of the icon
+        iconSize: [50, 50], // size of the icon
         iconAnchor: [20, 32], // point of the icon which will correspond to marker's location
         popupAnchor: [0, -32], // point from which the popup should open relative to the iconAnchor,
         className: 'custom-marker',
@@ -39,26 +39,25 @@ export function Map() {
     return (
         <>
             <MapContainer
-                center={[40.8501455,-73.8792966]}
-                zoom={16}
-                minZoom={15}
+                minZoom={-2}
+                maxZoom={2}
+                bounds={[[0, 0], [1591, 2500]]}
+                maxBounds={[[-200, -200], [1791, 2700]]}
                 scrollWheelZoom={false}
+                crs={L.CRS.Simple}
             >
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={[40.8501455,-73.8792966]} icon={giraffesIcon}>
+                <ImageOverlay url="/map-1.jpg" bounds={[[0, 0], [1591, 2500]]}  />
+                <Marker position={[850,500]} icon={giraffesIcon}>
                     <Popup>
                         Giraffes
                     </Popup>
                 </Marker>
-                <Marker position={[40.8511455,-73.8802966]} icon={lionsIcon}>
+                <Marker position={[1000,1700]} icon={lionsIcon}>
                     <Popup>
                         Lions
                     </Popup>
                 </Marker>
-                <Marker position={[40.8511455,-73.8782966]} icon={penguinsIcon}>
+                <Marker position={[500,500]} icon={penguinsIcon}>
                     <Popup>
                         Penguins
                     </Popup>
