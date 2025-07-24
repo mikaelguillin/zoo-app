@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { NavLink, type NavLinkRenderProps } from "react-router";
 import { Box, HStack, Text } from "@chakra-ui/react";
-import { BsHouse, BsMap, BsPerson } from "react-icons/bs";
+import { BsHouseFill, BsMapFill, BsPersonFill } from "react-icons/bs";
 import { BiSolidMicrophoneAlt } from "react-icons/bi";
 
 export function Layout({children}: {children: ReactNode}) {
@@ -17,12 +17,12 @@ export function Layout({children}: {children: ReactNode}) {
             <main>
                 {children}
             </main>
-            <Box as="nav" className="main-navigation" position="fixed" bottom={0} left={0} right={0} pl={5} pr={5} background="white" zIndex={9999} borderTop="1px solid black" fontSize={15}>
+            <Box as="nav" className="main-navigation" position="fixed" bottom={0} left={0} right={0} pl={5} pr={5} background="white" zIndex={9999} fontSize={15}>
                 <HStack as="ul" justifyContent="center" textAlign="center">
                     <li>
                         <NavLink to="/" className={getClassName}>
                             <Box asChild margin="0 auto">
-                                <BsHouse size={22} />
+                                <BsHouseFill size={22} />
                             </Box>
                             <Text fontSize="10px">
                                 Home
@@ -32,7 +32,7 @@ export function Layout({children}: {children: ReactNode}) {
                     <li>
                         <NavLink to="/map" className={getClassName}>
                             <Box asChild margin="0 auto">
-                                <BsMap size={22} />
+                                <BsMapFill size={22} />
                             </Box>
                             <Text fontSize="10px">
                                 Map
@@ -52,7 +52,7 @@ export function Layout({children}: {children: ReactNode}) {
                     <li>
                         <NavLink to="/myaccount" className={getClassName}>
                             <Box asChild margin="0 auto">
-                                <BsPerson size={22} />
+                                <BsPersonFill size={22} />
                             </Box>
                             <Text fontSize="10px">
                                 My Account

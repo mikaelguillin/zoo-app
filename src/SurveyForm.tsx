@@ -1,6 +1,6 @@
 import { Box, Button, Field, Heading, Input, RatingGroup, Textarea } from "@chakra-ui/react";
 
-export function SurveyForm() {
+export default function SurveyForm() {
     return (
         <Box className="container">
             <Heading as="h1" mb={4}>Give us a feedback!</Heading>

@@ -5,7 +5,7 @@ import { OpeningHoursDialog } from "./OpeningHoursDialog";
 import { UsefulInformationDialog } from "./UsefulInformationDialog";
 import { ZooAccessDialog } from "./ZooAccessDialog";
 
-export function Home() {
+export default function Home() {
     const {
         open: isOpeningHoursOpen,
         onOpen: onOpeningHoursOpen,

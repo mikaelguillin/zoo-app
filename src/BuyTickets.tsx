@@ -2,7 +2,7 @@ import { Button, Field, HStack, IconButton, Input, Box, Heading } from "@chakra-
 import { BsCreditCard, BsPaypal } from "react-icons/bs";
 import { SiVenmo } from "react-icons/si";
 
-export function BuyTickets() {
+export default function BuyTickets() {
     return (
         <Box className="container">
             <Heading as="h1" mb={4}>Buy a ticket</Heading>

@@ -22,8 +22,16 @@ main {
   padding-bottom: 52px;
 }
 
+.main-navigation {
+  border-top: 1px solid var(--chakra-colors-gray-400)
+}
+
+.main-navigation a {
+  color: var(--chakra-colors-gray-600);
+}
+
 .main-navigation .active {
-  color: blue;
+  color: var(--chakra-colors-blue-600);
 }
 
 .main-navigation a {

@@ -1,7 +1,7 @@
 import { Badge, Box, Card, Heading, HStack, Image, Switch } from "@chakra-ui/react";
 import { BsBell, BsClock } from "react-icons/bs";
 
-export function ShowsList() {
+export default function ShowsList() {
     return (
         <>
             <Heading as="h1" mt={3} mb={4}>List of shows and animations</Heading>

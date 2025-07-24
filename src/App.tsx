@@ -1,16 +1,18 @@
 import './App.css'
 import 'leaflet/dist/leaflet.css'
-// import './leaflet.css'
 import { BrowserRouter, Route, Routes } from 'react-router';
-import { Home } from './Home';
 import { Layout } from './Layout';
-import { Map } from './Map';
-import { ShowsList } from './ShowsList';
-import { BuyTickets } from './BuyTickets';
-import { SurveyForm } from './SurveyForm';
+import { lazy } from 'react';
+
+const Home = lazy(() => import('./Home.tsx'))
+const Map = lazy(() => import('./Map.tsx'))
+const ShowsList = lazy(() => import('./ShowsList.tsx'))
+const BuyTickets = lazy(() => import('./BuyTickets.tsx'))
+const SurveyForm = lazy(() => import('./SurveyForm.tsx'))
+const MyAccount = lazy(() => import('./MyAccount.tsx'))
+
 
 function App() {
-
   return (
     <BrowserRouter>
       <Layout>
@@ -20,11 +22,10 @@ function App() {
             <Route path="/shows" element={<ShowsList />} />
             <Route path="/tickets" element={<BuyTickets />} />
             <Route path="/feedback" element={<SurveyForm />} />
-            {/* <Route path="/myaccount" element={<ShowsList />} /> */}
+            <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
-      </Layout>
-        
-      </BrowserRouter>
+      </Layout>    
+    </BrowserRouter>
   )
 }
 
