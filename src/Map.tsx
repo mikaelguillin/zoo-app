@@ -5,6 +5,18 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
 import { LuSettings2 } from "react-icons/lu";
 import { MapFiltersDialog } from "./MapFiltersDialog";
 import { useState } from "react";
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+const DefaultIcon = L.icon({
+    iconUrl: markerIcon,
+    iconRetinaUrl: markerIcon2x,
+    shadowUrl: markerShadow,
+    iconSize: [25, 41]
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 
 const geolocationsPositions: LatLngExpression[] = [[700,1700], [300,1700], [700,1000], [300,300], [300,1000]];
