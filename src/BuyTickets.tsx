@@ -1,42 +1,50 @@
-import { Button, Field, HStack, IconButton, Input, Box, Heading } from "@chakra-ui/react";
-import { BsCreditCard, BsPaypal } from "react-icons/bs";
+import { Button, Field, HStack, IconButton, Input, Box, Heading, Checkbox, VStack } from "@chakra-ui/react";
+import { BsCheck, BsCreditCard, BsPaypal } from "react-icons/bs";
 import { SiVenmo } from "react-icons/si";
 
 export default function BuyTickets() {
     return (
         <Box className="container">
-            <Heading as="h1" mb={4}>Buy a ticket</Heading>
+            <Heading as="h1" size="3xl" mb={4}>Buy a ticket</Heading>
 
             <form>
-                <Field.Root>
-                    <Field.Label>
-                        <Field.RequiredIndicator />
-                        Last Name:
-                    </Field.Label>
-                    <Input />
-                    <Field.HelperText />
-                    <Field.ErrorText />
-                </Field.Root>
-                <Field.Root>
-                    <Field.Label>
-                        <Field.RequiredIndicator />
-                        First Name:
-                    </Field.Label>
-                    <Input />
-                    <Field.HelperText />
-                    <Field.ErrorText />
-                </Field.Root>
-                <Field.Root>
-                    <Field.Label>
-                        <Field.RequiredIndicator />
-                        Email Address:
-                    </Field.Label>
-                    <Input />
-                    <Field.HelperText />
-                    <Field.ErrorText />
-                </Field.Root>
+                <VStack alignItems="start" gap={3}>
+                    <Field.Root>
+                        <Field.Label>
+                            <Field.RequiredIndicator />
+                            Last Name:
+                        </Field.Label>
+                        <Input />
+                    </Field.Root>
+                    <Field.Root>
+                        <Field.Label>
+                            <Field.RequiredIndicator />
+                            First Name:
+                        </Field.Label>
+                        <Input />
+                    </Field.Root>
+                    <Field.Root>
+                        <Field.Label>
+                            <Field.RequiredIndicator />
+                            Email Address:
+                        </Field.Label>
+                        <Input />
+                    </Field.Root>
+                    <Field.Root>
+                        <Field.Label>
+                            <Field.RequiredIndicator />
+                            Address:
+                        </Field.Label>
+                        <Input />
+                    </Field.Root>
+                    <Checkbox.Root>
+                        <Checkbox.HiddenInput />
+                        <Checkbox.Control />
+                        <Checkbox.Label>Include a guided tour</Checkbox.Label>
+                    </Checkbox.Root>
+                </VStack>
 
-                <p>Payment method:</p>
+                <Heading mt={5} mb={3}>Payment method</Heading>
                 <HStack>
                     <Button>
                         <BsCreditCard />
@@ -51,7 +59,51 @@ export default function BuyTickets() {
                     </IconButton>
                 </HStack>
 
-                <Button>Submit</Button>
+                <VStack mt={4} gap={3} alignItems="normal">
+                    <Field.Root>
+                        <Field.Label>
+                            <Field.RequiredIndicator />
+                            Full Name:
+                        </Field.Label>
+                        <Input />
+                        <Field.HelperText />
+                        <Field.ErrorText />
+                    </Field.Root>
+                    <Field.Root>
+                        <Field.Label>
+                            <Field.RequiredIndicator />
+                            Card Number:
+                        </Field.Label>
+                        <Input />
+                        <Field.HelperText />
+                        <Field.ErrorText />
+                    </Field.Root>
+                    <HStack gap={3}>
+                        <Field.Root>
+                            <Field.Label>
+                                <Field.RequiredIndicator />
+                                Exp Date:
+                            </Field.Label>
+                            <Input />
+                            <Field.HelperText />
+                            <Field.ErrorText />
+                        </Field.Root>
+                        <Field.Root>
+                            <Field.Label>
+                                <Field.RequiredIndicator />
+                                CVV:
+                            </Field.Label>
+                            <Input />
+                            <Field.HelperText />
+                            <Field.ErrorText />
+                        </Field.Root>
+                    </HStack>
+                </VStack>
+
+                <Button mt={3}>
+                    <BsCheck />
+                    Submit
+                </Button>
             </form>
         </Box>
     )

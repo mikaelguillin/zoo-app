@@ -1,10 +1,10 @@
-import { Box, Button, Field, Heading, Input, RatingGroup, Textarea } from "@chakra-ui/react";
+import { Box, Button, Field, Heading, Input, RatingGroup, Textarea, VStack } from "@chakra-ui/react";
 
 export default function SurveyForm() {
     return (
         <Box className="container">
             <Heading as="h1" mb={4}>Give us a feedback!</Heading>
-            <form>
+            <VStack as="form" gap={3}>
                 <Field.Root>
                     <Field.Label>
                         <Field.RequiredIndicator />
@@ -55,7 +55,7 @@ export default function SurveyForm() {
                     <Field.ErrorText />
                 </Field.Root>
                 <Button>Submit</Button>
-            </form>
+            </VStack>
         </Box>
     )
 }

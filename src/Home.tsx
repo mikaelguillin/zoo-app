@@ -1,4 +1,4 @@
-import { Badge, Box, Button, Card, Heading, HStack, IconButton, Image, Switch, useDisclosure, VStack } from "@chakra-ui/react";
+import { Badge, Box, Button, Card, Heading, HStack, IconButton, Image, Switch, useDisclosure } from "@chakra-ui/react";
 import { BsBell, BsCarFront, BsClock, BsFacebook, BsInfo, BsInstagram, BsTicket, BsTiktok, BsTwitterX, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router";
 import { OpeningHoursDialog } from "./OpeningHoursDialog";
@@ -31,6 +31,8 @@ export default function Home() {
                     <Image
                         src="https://images.unsplash.com/photo-1462888210965-cdf193fb74de?q=60&w=500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt=""
+                        maxHeight="400px"
+                        objectFit="contain"
                     />
                     <Card.Body>
                         <Card.Title mb="2">Penguins</Card.Title>
@@ -61,29 +63,42 @@ export default function Home() {
             <Box as="section" mt={5} mb={5}>
                 <Heading mb={4}>I prepare my visit</Heading>
 
-                <VStack>
-                    <Button onClick={onOpeningHoursOpen}>
+                <HStack flexWrap="wrap" gap={2}>
+                    <Button
+                        onClick={onOpeningHoursOpen}
+                        flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
+                        backgroundColor="orange.600"
+                    >
                         <BsClock />
                         Opening hours
                     </Button>
-                    <Button asChild>
+                    <Button
+                        asChild
+                        flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
+                        backgroundColor="orange.600"
+                    >
                         <Link to="/tickets">
                             <BsTicket />
                             Buy my tickets
                         </Link>
                     </Button>
-                    <Button onClick={onUsefulInformationOpen}>
+                    <Button
+                        onClick={onUsefulInformationOpen}
+                        flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
+                        backgroundColor="orange.600"
+                    >
                         <BsInfo />
                         Useful information
                     </Button>
-                    <Button onClick={onZooAccessOpen}>
+                    <Button
+                        onClick={onZooAccessOpen}
+                        flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
+                        backgroundColor="orange.600"
+                    >
                         <BsCarFront />
                         Access to the Zoo
                     </Button>
-                </VStack>
-            </Box>
-            <Box as="section" mt={5} mb={5}>
-                <Heading mb={4}>I book a guided tour</Heading>
+                </HStack>
             </Box>
             <Box as="section" mt={5} mb={5}>
                 <Heading mb={4}>Stay in touch</Heading>

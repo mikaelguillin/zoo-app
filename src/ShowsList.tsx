@@ -4,7 +4,9 @@ import { BsBell, BsClock } from "react-icons/bs";
 export default function ShowsList() {
     return (
         <>
-            <Heading as="h1" mt={3} mb={4}>List of shows and animations</Heading>
+            <Box className="container">
+                <Heading as="h1" mt={3} mb={4}>List of shows and animations</Heading>
+            </Box>
             <Card.Root flexDirection="row" overflow="hidden" size="sm">
                 <Image
                     objectFit="cover"

@@ -17,7 +17,7 @@ export function Layout({children}: {children: ReactNode}) {
             <main>
                 {children}
             </main>
-            <Box as="nav" className="main-navigation" position="fixed" bottom={0} left={0} right={0} pl={5} pr={5} background="white" zIndex={9999} fontSize={15}>
+            <Box as="nav" className="main-navigation" position="fixed" bottom={0} left={0} right={0} pl={5} pr={5} zIndex={9999} fontSize={15}>
                 <HStack as="ul" justifyContent="center" textAlign="center">
                     <li>
                         <NavLink to="/" className={getClassName}>

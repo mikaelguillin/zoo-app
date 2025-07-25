@@ -71,7 +71,7 @@ export default function MyAccount() {
             </Box>
 
             <Box as="section" mb={8}>
-                <Heading fontSize="2xl" mb={3}>Tours</Heading>
+                <Heading fontSize="2xl" mb={3}>Settings</Heading>
             </Box>
 
             <TicketDialog

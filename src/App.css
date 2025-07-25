@@ -1,10 +1,6 @@
-#root {
-  text-align: center;
-}
-
 div.leaflet-container {
   background: #28652f;
-  height: calc(100vh - 52px);
+  height: calc(100dvh - 52px);
   width: 100vw;
 }
 
@@ -15,7 +11,7 @@ div.leaflet-container {
 }
 
 .container {
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 main {
@@ -23,15 +19,15 @@ main {
 }
 
 .main-navigation {
-  border-top: 1px solid var(--chakra-colors-gray-400)
+  background-color: var(--chakra-colors-blue-900);
 }
 
 .main-navigation a {
-  color: var(--chakra-colors-gray-600);
+  color: white;
 }
 
 .main-navigation .active {
-  color: var(--chakra-colors-blue-600);
+  color: var(--chakra-colors-cyan-200);
 }
 
 .main-navigation a {
