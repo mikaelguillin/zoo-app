@@ -11,6 +11,8 @@ import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 import { BsSearch } from "react-icons/bs";
 import { MapSearchDialog } from "./MapSearchDialog";
 
+import 'leaflet/dist/leaflet.css'
+
 const DefaultIcon = L.icon({
     iconUrl: markerIcon,
     iconRetinaUrl: markerIcon2x,
