@@ -65,14 +65,6 @@ export default function Home() {
 
                 <HStack flexWrap="wrap" gap={2}>
                     <Button
-                        onClick={onOpeningHoursOpen}
-                        flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
-                        backgroundColor="orange.600"
-                    >
-                        <BsClock />
-                        Opening hours
-                    </Button>
-                    <Button
                         asChild
                         flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
                         backgroundColor="orange.600"
@@ -81,6 +73,14 @@ export default function Home() {
                             <BsTicket />
                             Buy my tickets
                         </Link>
+                    </Button>
+                    <Button
+                        onClick={onOpeningHoursOpen}
+                        flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
+                        backgroundColor="orange.600"
+                    >
+                        <BsClock />
+                        Opening hours
                     </Button>
                     <Button
                         onClick={onUsefulInformationOpen}
@@ -121,11 +121,13 @@ export default function Home() {
                     </IconButton>
                 </HStack>
 
-                <Button asChild mt={3}>
-                    <Link to="/feedback">
-                        Give us a feedback!
-                    </Link>
-                </Button>
+                <Box textAlign="center">
+                    <Button asChild mt={3}>
+                        <Link to="/feedback">
+                            Give us a feedback!
+                        </Link>
+                    </Button>
+                </Box>
             </Box>
 
             <OpeningHoursDialog
