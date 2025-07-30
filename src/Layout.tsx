@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 import { NavLink, type NavLinkRenderProps } from "react-router";
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, Circle, Float, HStack, Text } from "@chakra-ui/react";
 import { BsHouseFill, BsMapFill, BsPersonFill } from "react-icons/bs";
-import { BiSolidMicrophoneAlt } from "react-icons/bi";
+import { BiSolidBell, BiSolidMicrophoneAlt } from "react-icons/bi";
 
 export function Layout({children}: {children: ReactNode}) {
     const getClassName = ({ isActive, isPending }: NavLinkRenderProps) =>
@@ -17,8 +17,19 @@ export function Layout({children}: {children: ReactNode}) {
             <main>
                 {children}
             </main>
-            <Box as="nav" className="main-navigation" position="fixed" bottom={0} left={0} right={0} pl={5} pr={5} zIndex={9999} fontSize={15}>
-                <HStack as="ul" justifyContent="center" textAlign="center">
+            <Box
+                as="nav"
+                className="main-navigation"
+                position="fixed"
+                bottom={0}
+                left={0}
+                right={0}
+                pl={5}
+                pr={5}
+                zIndex={9999}
+                fontSize={15}
+            >
+                <HStack as="ul" justifyContent="center" textAlign="center" gap={0}>
                     <li>
                         <NavLink to="/" className={getClassName}>
                             <Box asChild margin="0 auto">
@@ -46,6 +57,25 @@ export function Layout({children}: {children: ReactNode}) {
                             </Box>
                             <Text fontSize="10px">
                                 Shows
+                            </Text>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/notifications" className={getClassName}>
+                            <Box pos="relative">
+                                <>
+                                    <Box asChild margin="0 auto">
+                                        <BiSolidBell size={22} />
+                                    </Box>
+                                    <Float offsetY="0" offsetX="4">
+                                        <Circle size="4" bg="red" color="white" fontSize={10}>
+                                            1
+                                        </Circle>
+                                    </Float>
+                                </>
+                            </Box>
+                            <Text fontSize="10px">
+                                Notifications
                             </Text>
                         </NavLink>
                     </li>

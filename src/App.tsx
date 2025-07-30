@@ -8,6 +8,7 @@ const Map = lazy(() => import('./Map.tsx'))
 const ShowsList = lazy(() => import('./ShowsList.tsx'))
 const BuyTickets = lazy(() => import('./BuyTickets.tsx'))
 const SurveyForm = lazy(() => import('./SurveyForm.tsx'))
+const Notifications = lazy(() => import('./Notifications.tsx'))
 const MyAccount = lazy(() => import('./MyAccount.tsx'))
 
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/shows" element={<ShowsList />} />
             <Route path="/tickets" element={<BuyTickets />} />
             <Route path="/feedback" element={<SurveyForm />} />
+            <Route path="/notifications" element={<Notifications />} />
             <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
       </Layout>    

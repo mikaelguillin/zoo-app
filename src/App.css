@@ -33,5 +33,5 @@ main {
 .main-navigation a {
   display: block;
   padding: .5em .3em;
-  width: 70px;
+  min-width: 70px;
 }
