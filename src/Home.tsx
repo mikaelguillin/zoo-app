@@ -37,6 +37,7 @@ export default function Home() {
                         asChild
                         flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
                         backgroundColor="orange.600"
+                        size="xl"
                     >
                         <Link to="/tickets">
                             <BsTicket />
@@ -47,6 +48,7 @@ export default function Home() {
                         onClick={onOpeningHoursOpen}
                         flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
                         backgroundColor="orange.600"
+                        size="xl"
                     >
                         <BsClock />
                         Opening hours
@@ -55,17 +57,19 @@ export default function Home() {
                         onClick={onUsefulInformationOpen}
                         flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
                         backgroundColor="orange.600"
+                        size="xl"
                     >
                         <BsInfo />
-                        Useful information
+                        Information
                     </Button>
                     <Button
                         onClick={onZooAccessOpen}
                         flexBasis="calc(50% - var(--chakra-spacing-2) / 2)"
                         backgroundColor="orange.600"
+                        size="xl"
                     >
                         <BsCarFront />
-                        Access to the Zoo
+                        How to access
                     </Button>
                 </HStack>
             </Box>

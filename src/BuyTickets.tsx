@@ -115,11 +115,11 @@ export default function BuyTickets() {
                             <BsCreditCard />
                             Credit Card
                         </Button>
-                        <Button>
+                        <Button backgroundColor="blue.700">
                             <BsPaypal />
                             Paypal
                         </Button>
-                        <Button>
+                        <Button backgroundColor="blue.500">
                             <IoLogoVenmo />
                             Venmo
                         </Button>
