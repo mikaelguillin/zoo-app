@@ -1,6 +1,6 @@
 import { ImageOverlay, MapContainer, Marker, Polyline } from "react-leaflet";
 import L, { LatLng, type LatLngExpression, type LeafletEventHandlerFnMap } from 'leaflet';
-import { Button, CloseButton, Drawer, Heading, HStack, IconButton, Image, Text, useDisclosure, VStack, type DrawerOpenChangeDetails } from "@chakra-ui/react";
+import { Box, Button, CloseButton, Drawer, Heading, HStack, IconButton, Image, Text, useDisclosure, VStack, type DrawerOpenChangeDetails } from "@chakra-ui/react";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { LuSettings2 } from "react-icons/lu";
 import { MapFiltersDialog } from "./MapFiltersDialog";
@@ -119,7 +119,7 @@ export default function Map() {
                 scrollWheelZoom={false}
                 crs={L.CRS.Simple}
             >
-                <ImageOverlay url="/map-1.jpg" bounds={[[0, 0], [1591, 2500]]}  />
+                <ImageOverlay url="/map.webp" bounds={[[0, 0], [1591, 2500]]}  />
                 <Marker data-id={1} position={[850,500]} icon={giraffesIcon} eventHandlers={markerEvents}></Marker>
                 <Marker data-id={2} position={[1000,1700]} icon={lionsIcon} eventHandlers={markerEvents}></Marker>
                 <Marker data-id={3} position={[500,500]} icon={penguinsIcon} eventHandlers={markerEvents}></Marker>
@@ -136,22 +136,25 @@ export default function Map() {
                 <VStack zIndex={999} position="absolute" left="6px" bottom="20px">
                     <IconButton
                         variant="plain"
-                        color="white"
                         onClick={onGeolocationClick}
+                        borderRadius="full"
+                        backgroundColor="#fff"
                     >
                         <FaLocationCrosshairs />
                     </IconButton>
                     <IconButton
                         variant="plain"
-                        color="white"
                         onClick={onFiltersOpen}
+                        borderRadius="full"
+                        backgroundColor="#fff"
                     >
                         <LuSettings2 />
                     </IconButton>
                     <IconButton
                         variant="plain"
-                        color="white"
                         onClick={onSearchOpen}
+                        borderRadius="full"
+                        backgroundColor="#fff"
                     >
                         <BsSearch />
                     </IconButton>
