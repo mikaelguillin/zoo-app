@@ -1,6 +1,6 @@
 import { ImageOverlay, MapContainer, Marker, Polyline } from "react-leaflet";
 import L, { LatLng, type LatLngExpression, type LeafletEventHandlerFnMap } from 'leaflet';
-import { Box, Button, CloseButton, Drawer, Heading, HStack, IconButton, Image, Text, useDisclosure, VStack, type DrawerOpenChangeDetails } from "@chakra-ui/react";
+import { Button, CloseButton, Drawer, Heading, HStack, IconButton, Image, Text, useDisclosure, VStack, type DrawerOpenChangeDetails } from "@chakra-ui/react";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { LuSettings2 } from "react-icons/lu";
 import { MapFiltersDialog } from "./MapFiltersDialog";
