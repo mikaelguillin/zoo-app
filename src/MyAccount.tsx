@@ -1,6 +1,16 @@
-import { Box, Button, Card, DataList, Heading, HStack, Text, useDisclosure } from "@chakra-ui/react";
+import { Box, Button, Card, createListCollection, DataList, Heading, HStack, Portal, Select, Switch, Text, useDisclosure, VStack } from "@chakra-ui/react";
 import { TicketDialog } from "./TicketDialog";
-import { BsTicket } from "react-icons/bs";
+import { BsBell, BsTicket } from "react-icons/bs";
+
+const languages = createListCollection({
+    items: [
+      { label: "🇺🇸 English", value: "english" },
+      { label: "🇫🇷 French", value: "french" },
+      { label: "🇪🇸 Spanish", value: "spanish" },
+      { label: "🇩🇪 German", value: "german" },
+      { label: "🇨🇳 Chinese", value: "chinese" },
+    ],
+  })
 
 export default function MyAccount() {
     const {
@@ -39,7 +49,7 @@ export default function MyAccount() {
             </Box>
 
             <Box as="section" mb={8}>
-                <Heading fontSize="2xl" mb={3}>Tickets</Heading>
+                <Heading fontSize="2xl" mb={4}>Tickets</Heading>
 
                 <ul>
                     <li>
@@ -84,7 +94,52 @@ export default function MyAccount() {
             </Box>
 
             <Box as="section" mb={8}>
-                <Heading fontSize="2xl" mb={3}>Settings</Heading>
+                <Heading fontSize="2xl" mb={4}>Settings</Heading>
+
+                <VStack gap={5} alignItems="flex-start">
+                    <Switch.Root defaultChecked>
+                        <Switch.HiddenInput />
+                        <Switch.Label>Enable notifications</Switch.Label>
+                        <Switch.Control>
+                            <Switch.Thumb>
+                                <Switch.ThumbIndicator fallback={<BsBell />}>
+                                    <BsBell />
+                                </Switch.ThumbIndicator>
+                            </Switch.Thumb>
+                        </Switch.Control>
+                    </Switch.Root>
+
+                    <Select.Root
+                        collection={languages}
+                        defaultValue={[languages.items[0].value]}
+                        width="300px"
+                        flexDirection="row"
+                        alignItems="center"
+                    >
+                        <Select.HiddenSelect />
+                        <Select.Label>Select language</Select.Label>
+                        <Select.Control flexGrow={1}>
+                            <Select.Trigger>
+                                <Select.ValueText />
+                            </Select.Trigger>
+                            <Select.IndicatorGroup>
+                                <Select.Indicator />
+                            </Select.IndicatorGroup>
+                        </Select.Control>
+                        <Portal>
+                            <Select.Positioner>
+                                <Select.Content>
+                                {languages.items.map((language) => (
+                                    <Select.Item item={language} key={language.value}>
+                                        {language.label}
+                                        <Select.ItemIndicator />
+                                    </Select.Item>
+                                ))}
+                                </Select.Content>
+                            </Select.Positioner>
+                        </Portal>
+                    </Select.Root>
+                </VStack>
             </Box>
 
             <TicketDialog
