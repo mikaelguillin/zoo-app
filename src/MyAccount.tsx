@@ -97,7 +97,7 @@ export default function MyAccount() {
                 <Heading fontSize="2xl" mb={4}>Settings</Heading>
 
                 <VStack gap={5} alignItems="flex-start">
-                    <Switch.Root defaultChecked>
+                    <Switch.Root colorPalette="green" defaultChecked size="lg">
                         <Switch.HiddenInput />
                         <Switch.Label>Enable notifications</Switch.Label>
                         <Switch.Control>

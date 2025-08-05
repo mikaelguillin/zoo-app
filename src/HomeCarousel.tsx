@@ -51,7 +51,7 @@ export default function HomeCarousel() {
                                 </HStack>
                             </Card.Body>
                             <Card.Footer>
-                                <Switch.Root size="lg">
+                                <Switch.Root size="lg" colorPalette="green">
                                     <Switch.HiddenInput />
                                     <Switch.Control>
                                         <Switch.Thumb>

@@ -30,7 +30,7 @@ export default function ShowsList() {
                         </HStack>
                     </Card.Body>
                     <Card.Footer>
-                        <Switch.Root size="lg">
+                        <Switch.Root size="lg" colorPalette="green">
                             <Switch.HiddenInput />
                             <Switch.Control>
                                 <Switch.Thumb>
@@ -67,7 +67,7 @@ export default function ShowsList() {
                         </HStack>
                     </Card.Body>
                     <Card.Footer>
-                        <Switch.Root size="lg">
+                        <Switch.Root size="lg" colorPalette="green">
                             <Switch.HiddenInput />
                             <Switch.Control>
                                 <Switch.Thumb>
@@ -104,7 +104,7 @@ export default function ShowsList() {
                         </HStack>
                     </Card.Body>
                     <Card.Footer>
-                        <Switch.Root size="lg">
+                        <Switch.Root size="lg" colorPalette="green">
                             <Switch.HiddenInput />
                             <Switch.Control>
                                 <Switch.Thumb>
