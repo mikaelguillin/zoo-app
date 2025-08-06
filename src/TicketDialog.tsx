@@ -11,7 +11,7 @@ export function TicketDialog({isOpen, onOpenChange}: {isOpen: boolean, onOpenCha
                             <Dialog.Title>Ticket</Dialog.Title>
                         </Dialog.Header>
                         <Dialog.Body>
-                            <QrCode.Root value="https://www.google.com" size="full">
+                            <QrCode.Root value="https://www.google.com" size="full" m="0 auto">
                                 <QrCode.Frame>
                                     <QrCode.Pattern />
                                 </QrCode.Frame>
