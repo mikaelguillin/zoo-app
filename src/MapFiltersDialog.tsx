@@ -1,4 +1,6 @@
-import { CheckboxCard, CloseButton, Dialog, Portal } from "@chakra-ui/react";
+import { CheckboxCard, CloseButton, Dialog, Icon, Portal } from "@chakra-ui/react";
+import { BsGift, BsInfoCircle } from "react-icons/bs";
+import { FaRestroom } from "react-icons/fa6";
 
 export function MapFiltersDialog({isOpen, onOpenChange}: {isOpen: boolean, onOpenChange: (e: any) => void}) {
     return (
@@ -8,14 +10,19 @@ export function MapFiltersDialog({isOpen, onOpenChange}: {isOpen: boolean, onOpe
                 <Dialog.Positioner>
                     <Dialog.Content>
                         <Dialog.Header>
-                            <Dialog.Title>Filters</Dialog.Title>
+                            <Dialog.Title>Map Filters</Dialog.Title>
                         </Dialog.Header>
                         <Dialog.Body>
                             <CheckboxCard.Root mb={3}>
                                 <CheckboxCard.HiddenInput />
                                 <CheckboxCard.Control>
                                     <CheckboxCard.Content>
-                                    <CheckboxCard.Label>Information Kiosks</CheckboxCard.Label>
+                                    <CheckboxCard.Label>
+                                        <Icon size="lg">
+                                            <BsInfoCircle />
+                                        </Icon>
+                                        <span>Information Kiosks</span>
+                                    </CheckboxCard.Label>
                                     </CheckboxCard.Content>
                                     <CheckboxCard.Indicator />
                                 </CheckboxCard.Control>
@@ -24,7 +31,12 @@ export function MapFiltersDialog({isOpen, onOpenChange}: {isOpen: boolean, onOpe
                                 <CheckboxCard.HiddenInput />
                                 <CheckboxCard.Control>
                                     <CheckboxCard.Content>
-                                    <CheckboxCard.Label>Souvenir Shops</CheckboxCard.Label>
+                                    <CheckboxCard.Label>
+                                        <Icon size="lg">
+                                            <BsGift />
+                                        </Icon>
+                                        <span>Souvenir Shops</span>
+                                    </CheckboxCard.Label>
                                     </CheckboxCard.Content>
                                     <CheckboxCard.Indicator />
                                 </CheckboxCard.Control>
@@ -33,7 +45,12 @@ export function MapFiltersDialog({isOpen, onOpenChange}: {isOpen: boolean, onOpe
                                 <CheckboxCard.HiddenInput />
                                 <CheckboxCard.Control>
                                     <CheckboxCard.Content>
-                                    <CheckboxCard.Label>Restrooms</CheckboxCard.Label>
+                                    <CheckboxCard.Label>
+                                      <Icon size="lg">
+                                        <FaRestroom />
+                                        </Icon>
+                                        <span>Restrooms</span>
+                                    </CheckboxCard.Label>
                                     </CheckboxCard.Content>
                                     <CheckboxCard.Indicator />
                                 </CheckboxCard.Control>
