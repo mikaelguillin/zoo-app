@@ -1,5 +1,5 @@
 import { Box, Button, Heading, HStack, IconButton, useDisclosure } from "@chakra-ui/react";
-import { BsCarFront, BsClock, BsFacebook, BsInfo, BsInstagram, BsTicket, BsTiktok, BsTwitterX, BsYoutube } from "react-icons/bs";
+import { BsCarFront, BsClock, BsFacebook, BsInfoCircle, BsInstagram, BsTicket, BsTiktok, BsTwitterX, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router";
 import { OpeningHoursDialog } from "./OpeningHoursDialog";
 import { UsefulInformationDialog } from "./UsefulInformationDialog";
@@ -59,7 +59,7 @@ export default function Home() {
                         backgroundColor="orange.600"
                         size="xl"
                     >
-                        <BsInfo />
+                        <BsInfoCircle />
                         Information
                     </Button>
                     <Button
